@@ -1,0 +1,25 @@
+#Work
+
+import sys
+from tkinter import *
+#will need numpy,random,PIL mb
+
+Mwindow = Tk()
+Mwindow.geometry("700x700") #change
+Mwindow.title("Game build 1.0 preAlfa")#change
+
+
+
+#def menu():#main Menu buttons(start,options,Exit, developers?)
+
+
+
+
+
+
+
+
+
+
+
+Mwindow.mainloop()
