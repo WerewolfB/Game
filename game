@@ -1,25 +1,55 @@
-#Work
+#Working menu preview
 
 import sys
 from tkinter import *
+from PIL import Image, ImageTk
+from tkinter import messagebox
+
+
 #will need numpy,random,PIL mb
+#заготовки
 
-Mwindow = Tk()
-Mwindow.geometry("700x700") #change
-Mwindow.title("Game build 1.0 preAlfa")#change
-
+#Button(window, text="", font=("Ink Free", 15), command= ).place(relx= ,rely= ,relwidth= ,relheight= )
 
 
-#def menu():#main Menu buttons(start,options,Exit, developers?)
+#DATA
+
+FPS=30
+background = Image.open("background.png")
+
+#window
+
+window = Tk()
+window.geometry('700x600')
+window.title("Game build 1.0 preAlfa")
+window.resizable(0,0)
+background.image = ImageTk.PhotoImage(background)
+Fon = Label(window, image=background.image)
+Fon.place(x=0, y=0, relwidth=1, relheight=1)
+
+
+#def menu():#main Menu buttons(Start,Options,Exit, Developers?)
+
+
+def menu():
+	def clickedStart():
+		print("Start") #connect needable
+
+	def clickedOptions():
+		print("Options") #connect needable
+		
+	def clickedDevelopers():
+		print("Developers") #connect needable
+
+	#Buttons
+	btStart = Button(window, text="Start", font=("Ink Free", 15), command=clickedStart).place(relx=0.35, rely=0.40, relwidth=0.35, relheight=0.14)
+	btOptions = Button(window, text="Options", font=("Ink Free", 15), command=clickedOptions).place(relx=0.35, rely=0.57, relwidth=0.35, relheight=0.14)
+	btDevelopers = Button(window, text="Developers", font=("Ink Free", 15), command=clickedDevelopers).place(relx=0.35, rely=0.75 ,relwidth=0.35, relheight=0.14)
 
 
 
 
 
+menu()
 
-
-
-
-
-
-Mwindow.mainloop()
+window.mainloop()
